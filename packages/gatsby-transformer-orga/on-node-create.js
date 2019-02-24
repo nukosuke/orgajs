@@ -1,6 +1,7 @@
 const { Parser } = require('orga')
 const crypto = require('crypto')
 const path = require('path')
+const moment = require('moment')
 const util = require('util')
 const { selectAll, select } = require('unist-util-select')
 const {
@@ -131,10 +132,9 @@ module.exports = async function onCreateNode(
       }
     }).forEach(n => {
       // creating slug
-      const { category, export_file_name } = n.meta
+      const { date, export_file_name } = n.meta
       const paths = [
-        `/`,
-        category,
+        moment(date).format('/YYYY/MM/DD'),
         export_file_name,
       ].filter(lpath => lpath)
       const slug = path.posix.join(...paths)
