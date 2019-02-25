@@ -133,10 +133,12 @@ module.exports = async function onCreateNode(
     }).forEach(n => {
       // creating slug
       const { date, export_file_name } = n.meta
-      const paths = [
-        moment(date).format('/YYYY/MM/DD'),
-        export_file_name,
-      ].filter(lpath => lpath)
+
+      /* Set 'HHmmss' as default value if export_file_name is empty */
+      const fmt = export_file_name === '' ?
+            [moment(date).format('/YYYY/MM/DD/HHmmss')] :
+            [moment(date).format('/YYYY/MM/DD'), export_file_name];
+      const paths = fmt.filter(lpath => lpath);
       const slug = path.posix.join(...paths)
       createNode(n)
       createNodeField({
