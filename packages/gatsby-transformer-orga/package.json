@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-transformer-orga",
-  "description": "Gatsby transformer plugin for org-mode with orga",
-  "version": "1.1.0",
-  "author": "Xiaoxing Hu <dawnstar.hu@gmail.com>",
+  "name": "@nukosuke/gatsby-transformer-orga",
+  "description": "Gatsby transformer plugin for org-mode with orga (forked from xiaoxinghu/orgajs)",
+  "version": "0.0.1",
+  "author": "nukosuke <nukosuke@lavabit.com>",
   "dependencies": {
     "bluebird": "^3.5.3",
     "hast-util-to-html": "^5.0.0",
