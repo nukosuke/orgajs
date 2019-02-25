@@ -1,7 +1,7 @@
 {
   "name": "@nukosuke/gatsby-transformer-orga",
   "description": "Gatsby transformer plugin for org-mode with orga (forked from xiaoxinghu/orgajs)",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "nukosuke <nukosuke@lavabit.com>",
   "dependencies": {
     "bluebird": "^3.5.3",
